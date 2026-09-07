@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /account
+Disallow: /auth
+
+Sitemap: https://miraaexportkenya.netlify.app/sitemap.xml

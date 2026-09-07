@@ -1,0 +1,236 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-dark-green: var(--dark-green);
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --shadow-soft: 0 4px 20px -4px oklch(0.2 0.05 150 / 0.08);
+  --shadow-elevated: 0 20px 50px -20px oklch(0.2 0.05 150 / 0.18);
+}
+
+:root {
+  --radius: 0.875rem;
+
+  /* Brand: Robu Cleaning Services — corporate blues & gold on light neutrals */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.22 0.04 256); /* Navy #0B1F3A */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.04 256);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.04 256);
+
+  /* Primary — Robu Blue #0057D8 */
+  --primary: oklch(0.5 0.22 258);
+  --primary-foreground: oklch(1 0 0);
+
+  /* Dark navy blue #003B8E */
+  --dark-green: oklch(0.38 0.18 256);
+
+  /* Gold #F4B400 */
+  --gold: oklch(0.8 0.15 85);
+  --gold-foreground: oklch(0.22 0.04 256);
+
+  --secondary: oklch(0.97 0.015 250); /* Light Blue #F5FAFF */
+  --secondary-foreground: oklch(0.22 0.04 256);
+
+  --muted: oklch(0.975 0.008 250); /* #F5FAFF */
+  --muted-foreground: oklch(0.5 0.03 256);
+
+  --accent: oklch(0.95 0.03 245);
+  --accent-foreground: oklch(0.38 0.18 256);
+
+  --destructive: oklch(0.6 0.22 27);
+  --destructive-foreground: oklch(1 0 0);
+
+  --border: oklch(0.92 0.01 250); /* #E5E7EB */
+  --input: oklch(0.92 0.01 250);
+  --ring: oklch(0.5 0.22 258);
+
+  /* Success green #00B67A, used for status/verification accents */
+  --success: oklch(0.68 0.17 155);
+  --success-foreground: oklch(1 0 0);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--color-foreground);
+  }
+}
+
+@utility container-page {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  max-width: 80rem;
+  @media (min-width: 768px) { padding-inline: 2rem; }
+}
+
+@utility eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+@utility heading-hero {
+  font-size: clamp(2.25rem, 5vw + 1rem, 4.75rem);
+  line-height: 1.02;
+  font-weight: 700;
+}
+
+@utility heading-section {
+  font-size: clamp(1.75rem, 2.5vw + 1rem, 2.75rem);
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+/* ---------- Motion system ---------- */
+
+@keyframes eldo-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes eldo-shine {
+  0% { transform: translateX(-120%) skewX(-18deg); }
+  100% { transform: translateX(220%) skewX(-18deg); }
+}
+
+@keyframes eldo-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes eldo-pulse-ring {
+  0% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--color-primary) 45%, transparent); }
+  70% { box-shadow: 0 0 0 14px color-mix(in oklab, var(--color-primary) 0%, transparent); }
+  100% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--color-primary) 0%, transparent); }
+}
+
+@utility float-slow {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: eldo-float 6s ease-in-out infinite;
+  }
+}
+
+@utility pulse-ring {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: eldo-pulse-ring 2.4s ease-out infinite;
+  }
+}
+
+@utility marquee-track {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: eldo-marquee 32s linear infinite;
+  }
+}
+
+/* Subtle sweep of light across a card on hover */
+@utility shine-hover {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      100deg,
+      transparent 30%,
+      color-mix(in oklab, white 55%, transparent) 50%,
+      transparent 70%
+    );
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    &:hover::after {
+      opacity: 1;
+      animation: eldo-shine 0.9s ease-out;
+    }
+  }
+}
+
+@utility lift-hover {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-elevated);
+  }
+}
+
+@utility underline-grow {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    background-color: var(--color-primary);
+    transition: transform 0.35s ease;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
