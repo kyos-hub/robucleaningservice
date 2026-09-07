@@ -58,20 +58,26 @@ function BlogPost() {
               <ArrowLeft className="h-4 w-4" /> Back to Blog & News
             </Link>
           </Reveal>
-          <Reveal delay={80} className="mt-6 max-w-3xl">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-primary-foreground">
+          <div className="mt-6 max-w-3xl">
+            <Reveal
+              delay={80}
+              as="span"
+              className="inline-flex items-center gap-1.5 rounded-full bg-primary/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-primary-foreground"
+            >
               <CatIcon className="h-3 w-3" /> {post.category}
-            </span>
-            <h1 className="heading-hero mt-4 text-white">{post.title}</h1>
-          </Reveal>
-          <Reveal delay={150} className="mt-6 flex flex-wrap items-center gap-5 text-sm text-white/80">
-            <span className="inline-flex items-center gap-1.5">
+            </Reveal>
+            <Reveal delay={160} as="h1" className="heading-hero mt-4 text-white">
+              {post.title}
+            </Reveal>
+          </div>
+          <div className="mt-6 flex flex-wrap items-center gap-5 text-sm text-white/80">
+            <Reveal delay={240} as="span" className="inline-flex items-center gap-1.5">
               <CalendarDays className="h-4 w-4" /> {formatDate(post.date)}
-            </span>
-            <span className="inline-flex items-center gap-1.5">
+            </Reveal>
+            <Reveal delay={300} as="span" className="inline-flex items-center gap-1.5">
               <Clock className="h-4 w-4" /> {post.readMinutes} min read
-            </span>
-          </Reveal>
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -84,7 +90,7 @@ function BlogPost() {
             </Reveal>
             <div className="mt-8 space-y-6">
               {post.body.map((paragraph, i) => (
-                <Reveal key={i} delay={i * 60} as="p" className="leading-relaxed text-foreground/90">
+                <Reveal key={i} delay={i * 80} as="p" className="leading-relaxed text-foreground/90">
                   {paragraph}
                 </Reveal>
               ))}

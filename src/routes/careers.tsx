@@ -124,11 +124,11 @@ function Careers() {
             />
           </Reveal>
           <div>
-            <Reveal>
-              <span className="eyebrow">Our story</span>
-              <h2 className="heading-section mt-4">Built by people who started on the ground</h2>
+            <Reveal as="span" className="eyebrow">Our story</Reveal>
+            <Reveal delay={60} as="h2" className="heading-section mt-4">
+              Built by people who started on the ground
             </Reveal>
-            <Reveal delay={100}>
+            <Reveal delay={140}>
               <p className="mt-5 text-muted-foreground leading-relaxed">
                 Robu Cleaning Services was registered in 1997 with just three employees. Since
                 then the company has grown into one of the leading service providers across
@@ -136,7 +136,7 @@ function Careers() {
                 today employing over 415 people.
               </p>
             </Reveal>
-            <Reveal delay={180} className="mt-6 flex items-start gap-3">
+            <Reveal delay={220} className="mt-6 flex items-start gap-3">
               <Building2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
               <p className="text-sm leading-relaxed text-muted-foreground">
                 Many of our supervisors and department heads began as cleaners, groundsmen or
@@ -159,7 +159,7 @@ function Careers() {
                 delay={i * 80}
                 className="group rounded-2xl border border-border bg-card p-7 lift-hover hover:border-primary/40"
               >
-                <div className="grid h-12 w-12 place-items-center rounded-xl bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
+                <div className="grid h-12 w-12 place-items-center rounded-xl bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground motion-safe:animate-in motion-safe:zoom-in-75 motion-safe:duration-500">
                   <Icon className="h-6 w-6" />
                 </div>
                 <h3 className="mt-5 font-display text-lg font-semibold">{title}</h3>
@@ -174,11 +174,11 @@ function Careers() {
       <section className="border-b border-border">
         <div className="container-page grid gap-12 py-16 md:py-24 lg:grid-cols-2 lg:items-center lg:gap-16">
           <div className="order-2 lg:order-1">
-            <Reveal>
-              <span className="eyebrow">Training & development</span>
-              <h2 className="heading-section mt-4">You'll never stop learning here</h2>
+            <Reveal as="span" className="eyebrow">Training & development</Reveal>
+            <Reveal delay={60} as="h2" className="heading-section mt-4">
+              You'll never stop learning here
             </Reveal>
-            <Reveal delay={100}>
+            <Reveal delay={140}>
               <p className="mt-5 text-muted-foreground leading-relaxed">
                 Every new hire trains at our fully equipped in-house training unit at the
                 Eldoret head office. Our dedicated Training & Quality Control Manager runs
@@ -191,8 +191,8 @@ function Careers() {
                 "Hands-on training before deployment to any site",
                 "Ongoing refresher courses for existing staff",
                 "Health, safety and environmental practice built into every module",
-              ].map((item) => (
-                <Reveal as="li" key={item} delay={150} className="flex items-start gap-3 text-sm text-muted-foreground">
+              ].map((item, i) => (
+                <Reveal as="li" key={item} delay={200 + i * 80} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <GraduationCap className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                   {item}
                 </Reveal>
@@ -234,7 +234,7 @@ function Careers() {
                 delay={i * 90}
                 className="rounded-2xl border border-white/15 bg-white/5 p-7 text-center backdrop-blur-sm transition-colors hover:border-[#F5D061]/40"
               >
-                <div className="mx-auto grid h-12 w-12 place-items-center rounded-xl bg-white/10 text-[#F5D061]">
+                <div className="mx-auto grid h-12 w-12 place-items-center rounded-xl bg-white/10 text-[#F5D061] motion-safe:animate-in motion-safe:zoom-in-75 motion-safe:duration-500">
                   <Icon className="h-6 w-6" />
                 </div>
                 <h3 className="mt-5 font-display text-lg font-semibold text-white">{title}</h3>
@@ -248,13 +248,15 @@ function Careers() {
       {/* Strong CV submission CTA */}
       <section>
         <div className="container-page py-16 text-center md:py-24">
-          <SectionHeading
-            align="center"
-            eyebrow="Interested?"
-            title="Send us your CV"
-            description="Email your CV, ID copy and academic certificates to our recruitment team, or drop them off at our Eldoret head office."
-          />
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <Reveal>
+            <SectionHeading
+              align="center"
+              eyebrow="Interested?"
+              title="Send us your CV"
+              description="Email your CV, ID copy and academic certificates to our recruitment team, or drop them off at our Eldoret head office."
+            />
+          </Reveal>
+          <Reveal delay={150} className="mt-8 flex flex-wrap justify-center gap-3">
             <Button asChild size="lg" className="h-12 px-7 rounded-xl font-display font-semibold transition-transform hover:-translate-y-0.5">
               <a href={site.emailHref}>
                 Email Your CV <ArrowRight className="ml-1.5 h-4 w-4" />
@@ -263,7 +265,7 @@ function Careers() {
             <Button asChild size="lg" variant="outline" className="h-12 px-7 rounded-xl font-display font-semibold transition-transform hover:-translate-y-0.5">
               <Link to="/contact">Contact Us <ArrowRight className="ml-1.5 h-4 w-4" /></Link>
             </Button>
-          </div>
+          </Reveal>
         </div>
       </section>
     </>

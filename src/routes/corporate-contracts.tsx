@@ -15,26 +15,26 @@ import imgExportServices2 from "@/assets/photos/export-services-2.jpg";
 const heroImg = imgExportServices;
 const packhouseImg = imgExportServices2;
 
-export const Route = createFileRoute("/export-services")({
+export const Route = createFileRoute("/corporate-contracts")({
   head: () => ({
     meta: [
-      { title: "Corporate Contracts — Robu Cleaning Services" },
+      { title: "Corporate Contracts | Robu Cleaning Services" },
       {
         name: "description",
         content:
-          "Coordinated corporate cleaning contracts: site assessment, crew scheduling, daily inspections, documentation and ongoing facility maintenance for organizations across Kenya.",
+          "Coordinated corporate cleaning contracts. Site assessment, crew scheduling, daily inspections, documentation and ongoing facility maintenance for organizations across Kenya.",
       },
-      { property: "og:title", content: "Corporate Contracts — Robu Cleaning Services" },
+      { property: "og:title", content: "Corporate Contracts | Robu Cleaning Services" },
       {
         property: "og:description",
         content:
-          "From site survey to sign-off — scheduling, staffing and quality support designed around the requirements of corporate clients.",
+          "From site survey to sign off. Scheduling, staffing and quality support designed around the requirements of corporate clients.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:url", content: "/export-services" },
+      { property: "og:url", content: "/corporate-contracts" },
     ],
-    links: [{ rel: "canonical", href: "/export-services" }],
+    links: [{ rel: "canonical", href: "/corporate-contracts" }],
   }),
   component: Services,
 });
@@ -45,8 +45,8 @@ const pillars = [
     icon: Sprout,
     services: [
       { icon: Handshake, title: "Client Coordination", body: "Working with your team to understand site layout, access requirements and service priorities." },
-      { icon: Search, title: "Site Survey", body: "On-site assessment to scope the job and confirm what equipment and crew size is needed." },
-      { icon: ClipboardCheck, title: "Scope Confirmation", body: "Agreeing the service scope and standards — floor cleaning, dusting, windows, grounds and more — before work begins." },
+      { icon: Search, title: "Site Survey", body: "On site assessment to scope the job and confirm what equipment and crew size is needed." },
+      { icon: ClipboardCheck, title: "Scope Confirmation", body: "Agreeing the service scope and standards floor cleaning, dusting, windows, grounds and more before work begins." },
       { icon: Layers, title: "Crew Scheduling", body: "Scheduling trained crews according to your site's operating hours and frequency requirements." },
     ],
   },
@@ -55,7 +55,7 @@ const pillars = [
     icon: Boxes,
     services: [
       { icon: Package, title: "Equipment & Supplies", body: "Supplying appropriate equipment and materials sourced from licensed, reputable suppliers for the job." },
-      { icon: Tag, title: "Job Sign-off", body: "Clear sign-off procedures coordinated with your on-site contact after each visit." },
+      { icon: Tag, title: "Job Sign off", body: "Clear sign off procedures coordinated with your on site contact after each visit." },
       { icon: ShieldCheck, title: "Daily Inspections", body: "Team leaders and area supervisors inspect work on site and brief our Operations Manager by phone every day." },
       { icon: FileText, title: "Service Documentation", body: "Job reports and relevant documentation coordinated for each visit or contract period." },
     ],
@@ -65,7 +65,7 @@ const pillars = [
     icon: Ship,
     services: [
       { icon: RouteIcon, title: "Contract Coordination", body: "Coordinating recurring visits, staffing and any schedule changes for your site." },
-      { icon: Ship, title: "Multi-Branch Support", body: "Supporting organizations with multiple sites from our Eldoret head office and Nairobi branch." },
+      { icon: Ship, title: "Multi Branch Support", body: "Supporting organizations with multiple sites from our Eldoret head office and Nairobi branch." },
       { icon: FileText, title: "Invoicing & Records", body: "Preparing and coordinating invoicing and service records for each billing period." },
       { icon: MessageSquare, title: "Client Communication", body: "Keeping clients informed at each stage from scheduling through to job completion." },
     ],
@@ -74,11 +74,11 @@ const pillars = [
 
 const timeline = [
   { step: "01", title: "Client Enquiry", body: "Client submits site, service type and frequency requirements through our quote form." },
-  { step: "02", title: "Requirements Review", body: "Our team reviews the request and any site-specific requirements." },
+  { step: "02", title: "Requirements Review", body: "Our team reviews the request and any site specific requirements." },
   { step: "03", title: "Site Survey", body: "A site visit is arranged to confirm scope, access and equipment needs." },
   { step: "04", title: "Quotation & Agreement", body: "A quote and service agreement are prepared based on the confirmed scope." },
   { step: "05", title: "Scheduling & Delivery", body: "Crews are scheduled and the service is delivered to the agreed standard." },
-  { step: "06", title: "Reporting & Follow-up", body: "Job reports and any relevant documentation are shared with you directly by our team." },
+  { step: "06", title: "Reporting & Follow up", body: "Job reports and any relevant documentation are shared with you directly by our team." },
 ];
 
 const assurances = [
@@ -87,7 +87,7 @@ const assurances = [
   "Documentation coordinated per contract",
   "One coordination team for client communication",
   "Equipment and products suited to the site",
-  "Daily inspection and supervisor follow-up on every job",
+  "Daily inspection and supervisor follow up on every job",
 ];
 
 function Services() {
@@ -106,7 +106,7 @@ function Services() {
             </Reveal>
             <Reveal delay={100}>
               <h1 className="heading-hero mt-5 text-white">
-                From <span className="text-[#F5D061]">site survey to sign-off.</span>
+                From <span className="text-[#F5D061]">site survey to sign off.</span>
               </h1>
             </Reveal>
             <Reveal delay={200}>
@@ -208,8 +208,8 @@ function Services() {
               <Reveal>
                 <SectionHeading
                   eyebrow="How it works"
-                  title="From first enquiry to job sign-off"
-                  description="A repeatable six-step process. You always know what happens next."
+                  title="From first enquiry to job sign off"
+                  description="A repeatable six step process. You always know what happens next."
                 />
               </Reveal>
               <Reveal delay={150} variant="scale" className="mt-8 overflow-hidden rounded-3xl border border-border">

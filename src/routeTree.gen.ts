@@ -14,12 +14,14 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as CareersRouteImport } from './routes/careers'
 import { Route as ContactRouteImport } from './routes/contact'
-import { Route as ExportServicesRouteImport } from './routes/export-services'
+import { Route as CorporateContractsRouteImport } from './routes/corporate-contracts'
 import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as QualityComplianceRouteImport } from './routes/quality-compliance'
 import { Route as ServiceComplianceRouteImport } from './routes/service-compliance'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
@@ -50,14 +52,19 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ExportServicesRoute = ExportServicesRouteImport.update({
-  id: '/export-services',
-  path: '/export-services',
+const CorporateContractsRoute = CorporateContractsRouteImport.update({
+  id: '/corporate-contracts',
+  path: '/corporate-contracts',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GalleryRoute = GalleryRouteImport.update({
   id: '/gallery',
   path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const QualityComplianceRoute = QualityComplianceRouteImport.update({
@@ -78,6 +85,11 @@ const ServicesRoute = ServicesRouteImport.update({
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
@@ -107,12 +119,14 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRouteWithChildren
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
-  '/export-services': typeof ExportServicesRoute
+  '/corporate-contracts': typeof CorporateContractsRoute
   '/gallery': typeof GalleryRoute
+  '/privacy': typeof PrivacyRoute
   '/quality-compliance': typeof QualityComplianceRoute
   '/service-compliance': typeof ServiceComplianceRoute
   '/services': typeof ServicesRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/blog/': typeof BlogIndexRoute
@@ -123,11 +137,13 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
-  '/export-services': typeof ExportServicesRoute
+  '/corporate-contracts': typeof CorporateContractsRoute
   '/gallery': typeof GalleryRoute
+  '/privacy': typeof PrivacyRoute
   '/quality-compliance': typeof QualityComplianceRoute
   '/service-compliance': typeof ServiceComplianceRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/blog': typeof BlogIndexRoute
@@ -140,12 +156,14 @@ export interface FileRoutesById {
   '/blog': typeof BlogRouteWithChildren
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
-  '/export-services': typeof ExportServicesRoute
+  '/corporate-contracts': typeof CorporateContractsRoute
   '/gallery': typeof GalleryRoute
+  '/privacy': typeof PrivacyRoute
   '/quality-compliance': typeof QualityComplianceRoute
   '/service-compliance': typeof ServiceComplianceRoute
   '/services': typeof ServicesRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/blog/': typeof BlogIndexRoute
@@ -159,12 +177,14 @@ export interface FileRouteTypes {
     | '/blog'
     | '/careers'
     | '/contact'
-    | '/export-services'
+    | '/corporate-contracts'
     | '/gallery'
+    | '/privacy'
     | '/quality-compliance'
     | '/service-compliance'
     | '/services'
     | '/sitemap.xml'
+    | '/terms'
     | '/blog/$slug'
     | '/services/$slug'
     | '/blog/'
@@ -175,11 +195,13 @@ export interface FileRouteTypes {
     | '/about'
     | '/careers'
     | '/contact'
-    | '/export-services'
+    | '/corporate-contracts'
     | '/gallery'
+    | '/privacy'
     | '/quality-compliance'
     | '/service-compliance'
     | '/sitemap.xml'
+    | '/terms'
     | '/blog/$slug'
     | '/services/$slug'
     | '/blog'
@@ -191,12 +213,14 @@ export interface FileRouteTypes {
     | '/blog'
     | '/careers'
     | '/contact'
-    | '/export-services'
+    | '/corporate-contracts'
     | '/gallery'
+    | '/privacy'
     | '/quality-compliance'
     | '/service-compliance'
     | '/services'
     | '/sitemap.xml'
+    | '/terms'
     | '/blog/$slug'
     | '/services/$slug'
     | '/blog/'
@@ -209,12 +233,14 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRouteWithChildren
   CareersRoute: typeof CareersRoute
   ContactRoute: typeof ContactRoute
-  ExportServicesRoute: typeof ExportServicesRoute
+  CorporateContractsRoute: typeof CorporateContractsRoute
   GalleryRoute: typeof GalleryRoute
+  PrivacyRoute: typeof PrivacyRoute
   QualityComplianceRoute: typeof QualityComplianceRoute
   ServiceComplianceRoute: typeof ServiceComplianceRoute
   ServicesRoute: typeof ServicesRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  TermsRoute: typeof TermsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -254,11 +280,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/export-services': {
-      id: '/export-services'
-      path: '/export-services'
-      fullPath: '/export-services'
-      preLoaderRoute: typeof ExportServicesRouteImport
+    '/corporate-contracts': {
+      id: '/corporate-contracts'
+      path: '/corporate-contracts'
+      fullPath: '/corporate-contracts'
+      preLoaderRoute: typeof CorporateContractsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/gallery': {
@@ -266,6 +292,13 @@ declare module '@tanstack/react-router' {
       path: '/gallery'
       fullPath: '/gallery'
       preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/quality-compliance': {
@@ -294,6 +327,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/': {
@@ -359,12 +399,14 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRouteWithChildren,
   CareersRoute: CareersRoute,
   ContactRoute: ContactRoute,
-  ExportServicesRoute: ExportServicesRoute,
+  CorporateContractsRoute: CorporateContractsRoute,
   GalleryRoute: GalleryRoute,
+  PrivacyRoute: PrivacyRoute,
   QualityComplianceRoute: QualityComplianceRoute,
   ServiceComplianceRoute: ServiceComplianceRoute,
   ServicesRoute: ServicesRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  TermsRoute: TermsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

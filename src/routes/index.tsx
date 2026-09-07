@@ -29,7 +29,7 @@ const reasons = [
   {
     icon: Globe2,
     title: "Trained pest control technicians",
-    body: "Fumigation is carried out by trained technicians using materials sourced from licensed, reputable suppliers — not a generic spray-and-go.",
+    body: "Fumigation is carried out by trained technicians using materials sourced from licensed, reputable suppliers, not a generic spray and go job.",
   },
   {
     icon: Sprout,
@@ -101,7 +101,7 @@ function Home() {
               {text(
                 "home_hero",
                 "subtitle",
-                "Robu Cleaning Services Ltd handles commercial, industrial, institutional and residential cleaning, sanitation, fumigation and pest control across Kenya — from a single site visit to a standing contract.",
+                "Robu Cleaning Services Ltd handles commercial, industrial, institutional and residential cleaning, sanitation, fumigation and pest control across Kenya, from a single site visit to a standing contract.",
               )}
             </p>
             <div className="mt-7 sm:mt-9 flex flex-wrap gap-3">
@@ -167,13 +167,13 @@ function Home() {
             <SectionHeading
               eyebrow="About Robu Cleaning Services"
               title="Started in Eldoret in 1997. Now working sites across Kenya."
-              description="We handle commercial, industrial, institutional and residential cleaning, sanitation, fumigation and pest control — the kind of work that keeps a facility running without anyone noticing it's happening."
+              description="We handle commercial, industrial, institutional and residential cleaning, sanitation, fumigation and pest control, the kind of work that keeps a facility running without anyone noticing it's happening."
             />
             <ul className="mt-7 sm:mt-8 space-y-3">
               {[
                 "Staff vetted with verified ID, references and a C.I.D. certificate of good conduct",
                 "Trained pest control and fumigation technicians",
-                "Scheduled contracts and one-off jobs, both",
+                "Scheduled contracts and one off jobs, both",
               ].map((t) => (
                 <li key={t} className="flex items-start gap-3 text-sm text-foreground">
                   <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-primary/15 text-primary">
@@ -203,7 +203,7 @@ function Home() {
             <SectionHeading
               eyebrow="Our Services"
               title="A few of the things we get called for."
-              description="Scoped, staffed and quoted against what your site actually needs — not a fixed package."
+              description="Scoped, staffed and quoted against what your site actually needs, not a fixed package."
             />
             <Button
               asChild
@@ -282,7 +282,7 @@ function Home() {
       {/* SERVICE AREAS */}
       <section className="border-t border-border">
         <div className="container-page py-14 sm:py-20 md:py-28 grid gap-10 sm:gap-16 lg:grid-cols-[1fr_1.1fr] items-center">
-          <div>
+          <Reveal variant="left">
             <SectionHeading
               eyebrow="Where We Work"
               title="Head office in Eldoret. Branch in Nairobi."
@@ -305,7 +305,7 @@ function Home() {
             >
               <Phone className="h-4 w-4" /> Call the office to check your area
             </a>
-          </div>
+          </Reveal>
 
           <Reveal
             variant="scale"
@@ -329,7 +329,10 @@ function Home() {
       {/* CTA */}
       <section className="border-t border-border">
         <div className="container-page py-12 sm:py-16 md:py-20">
-          <div className="rounded-2xl sm:rounded-3xl bg-[oklch(0.24_0.06_256)] px-6 py-12 sm:px-8 sm:py-16 md:px-16 md:py-20 text-center">
+          <Reveal
+            variant="scale"
+            className="rounded-2xl sm:rounded-3xl bg-[oklch(0.24_0.06_256)] px-6 py-12 sm:px-8 sm:py-16 md:px-16 md:py-20 text-center"
+          >
             <span className="inline-block font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.24em] text-white/50">
               Robu Cleaning Services
             </span>
@@ -347,7 +350,7 @@ function Home() {
                 Request a Quote <ArrowRight className="ml-1.5 h-4 w-4" />
               </Link>
             </Button>
-          </div>
+          </Reveal>
         </div>
       </section>
     </>

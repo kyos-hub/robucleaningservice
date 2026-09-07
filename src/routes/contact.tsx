@@ -47,24 +47,28 @@ function Contact() {
     <>
       <section className="relative overflow-hidden border-b border-border">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="" aria-hidden className="h-full w-full object-cover" />
+          <img src={heroImg} alt="" aria-hidden className="h-full w-full object-cover motion-safe:animate-in motion-safe:zoom-in-105 motion-safe:duration-[1600ms]" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/25" />
         </div>
         <div className="container-page relative max-w-3xl py-16 text-white md:py-24">
-          <span className="eyebrow text-white/80">Contact</span>
-          <h1 className="heading-hero mt-5 text-white">Let&apos;s talk about your next service.</h1>
-          <p className="mt-5 text-lg leading-relaxed text-white/90">
-            Tell us what you need, where your site is and when you need it done. Our team
-            will follow up with pricing, scheduling and next steps.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3 text-sm">
+          <Reveal as="span" className="eyebrow text-white/80">Contact</Reveal>
+          <Reveal delay={80} as="h1" className="heading-hero mt-5 text-white">
+            Let&apos;s talk about your next service.
+          </Reveal>
+          <Reveal delay={160}>
+            <p className="mt-5 text-lg leading-relaxed text-white/90">
+              Tell us what you need, where your site is and when you need it done. Our team
+              will follow up with pricing, scheduling and next steps.
+            </p>
+          </Reveal>
+          <Reveal delay={240} className="mt-8 flex flex-wrap gap-3 text-sm">
             <a href={site.phoneHref} className="inline-flex items-center gap-2 rounded-xl border border-white/40 bg-white/10 px-4 py-2.5 font-semibold backdrop-blur transition-colors hover:bg-white hover:text-foreground">
               <Phone className="h-4 w-4" /> {site.phone}
             </a>
             <a href={site.whatsappHref} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-4 py-2.5 font-semibold text-white transition-opacity hover:opacity-90">
               <MessageCircle className="h-4 w-4" /> WhatsApp us
             </a>
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -84,8 +88,8 @@ function Contact() {
       <section>
         <div className="container-page grid gap-12 py-16 md:py-24 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
-            <Reveal>
-              <h2 className="font-display text-2xl font-semibold">Get in touch</h2>
+            <Reveal as="h2" className="font-display text-2xl font-semibold">Get in touch</Reveal>
+            <Reveal delay={60}>
               <p className="mt-2 text-muted-foreground">Reach us directly through any of the channels below.</p>
             </Reveal>
 
@@ -118,11 +122,17 @@ function Contact() {
             </ul>
 
             {/* Branch network — sourced from company profile */}
-            <Reveal delay={90} className="mt-8">
-              <h3 className="font-display text-sm font-bold uppercase tracking-wider text-muted-foreground">Our branches</h3>
+            <div className="mt-8">
+              <Reveal as="h3" delay={90} className="font-display text-sm font-bold uppercase tracking-wider text-muted-foreground">
+                Our branches
+              </Reveal>
               <div className="mt-3 space-y-3">
-                {branches.map((branch) => (
-                  <div key={branch.name} className="flex items-start gap-4 rounded-2xl border border-border bg-card p-4 lift-hover hover:border-primary/40">
+                {branches.map((branch, i) => (
+                  <Reveal
+                    key={branch.name}
+                    delay={140 + i * 80}
+                    className="flex items-start gap-4 rounded-2xl border border-border bg-card p-4 lift-hover hover:border-primary/40"
+                  >
                     <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary">
                       <Building2 className="h-5 w-5" />
                     </div>
@@ -131,10 +141,10 @@ function Contact() {
                       <p className="mt-0.5 text-sm text-muted-foreground">{branch.address}</p>
                       <p className="mt-0.5 text-sm text-muted-foreground">{branch.phone}</p>
                     </div>
-                  </div>
+                  </Reveal>
                 ))}
               </div>
-            </Reveal>
+            </div>
 
             <Reveal delay={120} className="mt-8 overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-soft)]">
               <iframe
@@ -147,9 +157,9 @@ function Contact() {
             </Reveal>
           </div>
 
-          <div id="quote" className="scroll-mt-24">
+          <Reveal id="quote" delay={100} className="scroll-mt-24">
             <ContactForm />
-          </div>
+          </Reveal>
         </div>
       </section>
     </>

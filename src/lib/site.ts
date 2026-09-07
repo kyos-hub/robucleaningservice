@@ -48,7 +48,7 @@ export const nav = [
 
 // Sub-pages shown inside the "About Us" dropdown in the header.
 export const aboutDropdown = [
-  { to: "/export-services", label: "Corporate Contracts" },
+  { to: "/corporate-contracts", label: "Corporate Contracts" },
   { to: "/quality-compliance", label: "Quality & Compliance" },
 ] as const;
 

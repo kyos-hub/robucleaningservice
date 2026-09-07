@@ -15,7 +15,7 @@ import { nav, site } from "@/lib/site";
 const serviceLinks = [
   { label: "Our Services", to: "/services" as const },
   { label: "Request a Quote", to: "/contact" as const },
-  { label: "Corporate Contracts", to: "/export-services" as const },
+  { label: "Corporate Contracts", to: "/corporate-contracts" as const },
   { label: "Quality & Compliance", to: "/quality-compliance" as const },
 ];
 
@@ -163,12 +163,12 @@ export function SiteFooter() {
             <a href="/sitemap.xml" className="hover:text-foreground">
               Sitemap
             </a>
-            <a href="#" className="hover:text-foreground">
+            <Link to="/privacy" className="hover:text-foreground">
               Privacy Policy
-            </a>
-            <a href="#" className="hover:text-foreground">
+            </Link>
+            <Link to="/terms" className="hover:text-foreground">
               Terms &amp; Conditions
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -15,13 +15,13 @@ const heroImg =
 export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
-      { title: "Our Services — Robu Cleaning Services Ltd" },
+      { title: "Our Services | Robu Cleaning Services Ltd" },
       {
         name: "description",
         content:
           "Cleaning, pest control & fumigation, sanitary services, ground maintenance, garbage collection, messengerial and tea making services across Kenya.",
       },
-      { property: "og:title", content: "Our Services — Robu Cleaning Services Ltd" },
+      { property: "og:title", content: "Our Services | Robu Cleaning Services Ltd" },
       {
         property: "og:description",
         content:
@@ -75,7 +75,7 @@ function Products() {
               {text(
                 "products_hero",
                 "subtitle",
-                "From daily contract cleaning to fumigation, sanitary services, grounds and support staffing — every job is surveyed, scoped and priced against what your site actually needs, the same way we've worked since 1997.",
+                "From daily contract cleaning to fumigation, sanitary services, grounds and support staffing, every job is surveyed, scoped and priced against what your site actually needs, the same way we've worked since 1997.",
               )}
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
@@ -90,7 +90,7 @@ function Products() {
                 variant="outline"
                 className="h-12 px-6 rounded-xl font-display font-semibold bg-white/10 text-white border-white/40 hover:bg-white hover:text-foreground"
               >
-                <Link to="/export-services">Corporate contracts</Link>
+                <Link to="/corporate-contracts">Corporate contracts</Link>
               </Button>
             </div>
           </div>

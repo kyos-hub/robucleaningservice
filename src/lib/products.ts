@@ -73,7 +73,7 @@ export const services: Service[] = [
       },
       {
         title: "Deployment",
-        body: "Vetted, in-house trained cleaners are placed under a Team Leader with the correct machines, materials and PPE. All materials are sourced from licensed, reputable suppliers — expired or defective stock is never used.",
+        body: "Vetted, in-house trained cleaners are placed under a Team Leader with the correct machines, materials and PPE. All materials are sourced from licensed, reputable suppliers. Expired or defective stock is never used.",
       },
       {
         title: "Daily inspection",
@@ -86,7 +86,7 @@ export const services: Service[] = [
   },
   {
     slug: "car-wash",
-    name: "Car Wash — Interior & Exterior",
+    name: "Car Wash: Interior & Exterior",
     category: "Cleaning",
     tagline: "On-site washing for corporate fleets and staff parking.",
     description:
@@ -180,7 +180,7 @@ export const services: Service[] = [
     category: "Pest Control & Fumigation",
     tagline: "Licensed treatment plans set per site, not applied blanket-wide.",
     description:
-      "Pest control and fumigation headed by a technician trained in chemical engineering at Kenya Polytechnic, with prior experience at Antipest (Mombasa) and Pestlab (Kitale) and over six years in the field. All products are sourced from licensed suppliers and treatment plans are written for each individual site — never a blanket spray.",
+      "Pest control and fumigation headed by a technician trained in chemical engineering at Kenya Polytechnic, with prior experience at Antipest (Mombasa) and Pestlab (Kitale) and over six years in the field. All products are sourced from licensed suppliers and treatment plans are written for each individual site, never a blanket spray.",
     image:
       "https://images.unsplash.com/photo-1632943131957-6f9c5e449ff8?auto=format&fit=crop&w=1400&q=80",
     includes: [

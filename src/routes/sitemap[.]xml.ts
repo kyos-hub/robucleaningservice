@@ -8,7 +8,7 @@ type Entry = { path: string; changefreq: string; priority: string };
 const STATIC_ENTRIES: Entry[] = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
   { path: "/services", changefreq: "weekly", priority: "0.9" },
-  { path: "/export-services", changefreq: "monthly", priority: "0.8" },
+  { path: "/corporate-contracts", changefreq: "monthly", priority: "0.8" },
   { path: "/quality-compliance", changefreq: "monthly", priority: "0.7" },
   { path: "/service-compliance", changefreq: "monthly", priority: "0.5" },
   { path: "/about", changefreq: "monthly", priority: "0.8" },

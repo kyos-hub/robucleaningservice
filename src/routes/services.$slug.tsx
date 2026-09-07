@@ -20,7 +20,7 @@ import imgUseProducts from "@/assets/photos/use-products.jpg";
  * Builds a full Service object from a Supabase products row for slugs that
  * only exist in the DB (i.e. not in the static services[] array in
  * lib/products.ts). This is what was missing before: the loader used to
- * ONLY check the static array, so any DB-only product 404'd when clicked.
+ * ONLY check the static array, so any DB only product 404'd when clicked.
  */
 function serviceFromDbRow(row: {
   slug: string;
@@ -72,7 +72,7 @@ export const Route = createFileRoute("/services/$slug")({
     // 1. Try the static, hand-written catalog first (richest content).
     const staticService = getServiceBySlug(params.slug);
 
-    // 2. Always check the DB too — for status ("hidden") and as a fallback
+    // 2. Always check the DB too, for status ("hidden") and as a fallback
     //    source of truth when the slug only exists in Supabase.
     const { data: product, error } = await supabase
       .from("products")
@@ -90,7 +90,7 @@ export const Route = createFileRoute("/services/$slug")({
     }
 
     if (product) {
-      // DB-only product: build a Service object from it instead of 404ing.
+      // DB only product: build a Service object from it instead of 404ing.
       return serviceFromDbRow(product as any);
     }
 
@@ -101,12 +101,12 @@ export const Route = createFileRoute("/services/$slug")({
     if (!loaderData) {
       return {
         meta: [
-          { title: "Service not found — Robu Cleaning Services Ltd" },
+          { title: "Service not found | Robu Cleaning Services Ltd" },
           { name: "robots", content: "noindex" },
         ],
       };
     }
-    const title = `${loaderData.name} — Robu Cleaning Services Ltd`;
+    const title = `${loaderData.name} | Robu Cleaning Services Ltd`;
     const description = loaderData.tagline;
     return {
       meta: [

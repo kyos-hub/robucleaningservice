@@ -105,7 +105,7 @@ function Blog() {
             </Reveal>
 
             {/* Hero search bar */}
-            <Reveal delay={280} className="mt-8 max-w-xl">
+            <Reveal delay={300} className="mt-8 max-w-xl">
               <label htmlFor="blog-search" className="sr-only">
                 Search articles
               </label>
@@ -144,11 +144,11 @@ function Blog() {
                 Featured
               </span>
             </Reveal>
-            <Reveal
-              delay={80}
-              className="mt-4 grid gap-0 overflow-hidden rounded-3xl border border-border bg-card shadow-[var(--shadow-soft)] lg:grid-cols-2"
-            >
-              <div className="group relative aspect-[16/10] overflow-hidden lg:aspect-auto">
+            <div className="mt-4 grid gap-0 overflow-hidden rounded-3xl border border-border bg-card shadow-[var(--shadow-soft)] lg:grid-cols-2">
+              <Reveal
+                delay={80}
+                className="group relative aspect-[16/10] overflow-hidden lg:aspect-auto"
+              >
                 <img
                   src={featured.image}
                   alt={featured.title}
@@ -156,30 +156,42 @@ function Blog() {
                   className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent lg:hidden" />
-              </div>
+              </Reveal>
               <div className="flex flex-col justify-center p-8 md:p-12">
-                <span className="inline-flex w-fit items-center rounded-full bg-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-primary">
+                <Reveal
+                  delay={160}
+                  as="span"
+                  className="inline-flex w-fit items-center rounded-full bg-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-primary"
+                >
                   {featured.category}
-                </span>
-                <h2 className="mt-4 font-display text-2xl font-bold leading-snug sm:text-3xl">
+                </Reveal>
+                <Reveal
+                  delay={220}
+                  as="h2"
+                  className="mt-4 font-display text-2xl font-bold leading-snug sm:text-3xl"
+                >
                   {featured.title}
-                </h2>
-                <p className="mt-4 text-muted-foreground leading-relaxed">{featured.excerpt}</p>
-                <div className="mt-6 flex items-center gap-4">
+                </Reveal>
+                <Reveal delay={280} as="p" className="mt-4 text-muted-foreground leading-relaxed">
+                  {featured.excerpt}
+                </Reveal>
+                <Reveal delay={340} className="mt-6 flex items-center gap-4">
                   <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
                     <CalendarDays className="h-3.5 w-3.5" /> {formatDate(featured.date)}
                   </span>
-                </div>
-                <Link
-                  to="/blog/$slug"
-                  params={{ slug: featured.slug }}
-                  className="group/link mt-6 inline-flex w-fit items-center gap-1.5 font-display text-sm font-semibold text-primary"
-                >
-                  Read the full story
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover/link:translate-x-1" />
-                </Link>
+                </Reveal>
+                <Reveal delay={400}>
+                  <Link
+                    to="/blog/$slug"
+                    params={{ slug: featured.slug }}
+                    className="group/link mt-6 inline-flex w-fit items-center gap-1.5 font-display text-sm font-semibold text-primary"
+                  >
+                    Read the full story
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover/link:translate-x-1" />
+                  </Link>
+                </Reveal>
               </div>
-            </Reveal>
+            </div>
           </div>
         </section>
       )}
@@ -213,10 +225,10 @@ function Blog() {
               ].map(({ icon: Icon, title, body }, i) => (
                 <Reveal
                   key={title}
-                  delay={i * 90}
+                  delay={i * 120}
                   className="rounded-2xl border border-border bg-card p-6 text-center lift-hover hover:border-primary/40"
                 >
-                  <div className="mx-auto grid h-12 w-12 place-items-center rounded-xl bg-primary/10 text-primary">
+                  <div className="mx-auto grid h-12 w-12 place-items-center rounded-xl bg-primary/10 text-primary motion-safe:animate-in motion-safe:zoom-in-75 motion-safe:duration-500">
                     <Icon className="h-6 w-6" />
                   </div>
                   <h3 className="mt-4 font-display text-base font-semibold">{title}</h3>
@@ -237,32 +249,36 @@ function Blog() {
             title={hasActiveQuery ? `Results for “${query.trim()}”` : "More from the blog"}
           />
 
-          {/* Filter pills + inline search (visible once scrolled past hero too) */}
-          <Reveal className="mt-10 flex flex-col items-center gap-4">
+          {/* Filter pills + inline search */}
+          <div className="mt-10 flex flex-col items-center gap-4">
             <div className="flex flex-wrap items-center justify-center gap-2">
-              <span className="mr-1 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+              <Reveal
+                as="span"
+                className="mr-1 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground"
+              >
                 Filter
-              </span>
+              </Reveal>
               <div className="flex flex-wrap items-center gap-2 rounded-full border border-border bg-card p-1.5">
-                {(["All", ...categories] as Filter[]).map((f) => (
-                  <button
-                    key={f}
-                    type="button"
-                    onClick={() => setFilter(f)}
-                    className={cn(
-                      "rounded-full px-4 py-1.5 text-sm font-medium font-display transition-colors",
-                      filter === f
-                        ? "bg-primary text-primary-foreground"
-                        : "text-foreground/70 hover:bg-accent hover:text-foreground",
-                    )}
-                  >
-                    {f}
-                  </button>
+                {(["All", ...categories] as Filter[]).map((f, i) => (
+                  <Reveal key={f} delay={i * 60} as="span">
+                    <button
+                      type="button"
+                      onClick={() => setFilter(f)}
+                      className={cn(
+                        "rounded-full px-4 py-1.5 text-sm font-medium font-display transition-colors",
+                        filter === f
+                          ? "bg-primary text-primary-foreground"
+                          : "text-foreground/70 hover:bg-accent hover:text-foreground",
+                      )}
+                    >
+                      {f}
+                    </button>
+                  </Reveal>
                 ))}
               </div>
             </div>
 
-            <div className="relative w-full max-w-md">
+            <Reveal delay={220} className="relative w-full max-w-md">
               <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
               <input
                 type="text"
@@ -282,8 +298,8 @@ function Blog() {
                   <X className="h-3.5 w-3.5" />
                 </button>
               )}
-            </div>
-          </Reveal>
+            </Reveal>
+          </div>
 
           {visible.length === 0 ? (
             <Reveal className="mx-auto mt-12 flex max-w-md flex-col items-center gap-3 rounded-2xl border border-border bg-card p-10 text-center">
