@@ -8,7 +8,7 @@ import { useProducts } from "@/hooks/use-products";
 import { useSiteContent } from "@/hooks/use-site-content";
 import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/reveal";
-import heroImg from "@/assets/photos/robu-pest-control-garden.jpg";
+import heroImg from "@/assets/photos/export-services.jpg";
 
 export const Route = createFileRoute("/services/")({
   head: () => ({
