@@ -8,7 +8,7 @@ import { useSiteContent } from "@/hooks/use-site-content";
 import { FaqSection } from "@/components/faq-section";
 import { site } from "@/lib/site";
 import imgHomeAbout from "@/assets/photos/robu-restroom-tile-cleaning.png";
-import imgHomeHero from "@/assets/photos/robu-vehicles-messenger.jpg";
+import imgHomeHero from "@/assets/photos/use-products.jpg";
 
 const aboutAsset =
   imgHomeAbout;
