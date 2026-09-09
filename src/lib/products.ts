@@ -598,7 +598,7 @@ export const services: Service[] = [
     description:
       "Specialized, one-off or custom-scoped jobs for clients whose needs don't fit neatly into a standard package, quoted individually against the site visit and the client's brief.",
     image:
-      imgSuppliesStore,
+      imgShowerCleaning,
     includes: [
       "Custom-scoped cleaning or maintenance jobs",
       "Pre-event or post-event deep cleaning",

@@ -89,7 +89,7 @@ function Blog() {
           <div className="max-w-3xl text-white">
             <Reveal>
               <span className="eyebrow inline-flex items-center gap-2 text-white/80">
-                <Sparkles className="h-3.5 w-3.5" /> Blog & News
+                 Blog & News
               </span>
             </Reveal>
             <Reveal delay={100}>
