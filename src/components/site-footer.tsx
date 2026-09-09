@@ -163,10 +163,10 @@ export function SiteFooter() {
             <a href="/sitemap.xml" className="hover:text-foreground">
               Sitemap
             </a>
-            <a href="#" className="hover:text-foreground">
+            <a href="/privacy" className="hover:text-foreground">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-foreground">
+            <a href="terms" className="hover:text-foreground">
               Terms &amp; Conditions
             </a>
           </div>

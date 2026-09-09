@@ -9,7 +9,7 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta name="robots" content="noindex"/>
-        <title>XML Sitemap — Eldo Fresh Farm</title>
+        <title>XML Sitemap — Robu Cleaning Services</title>
         <style>
           :root { --green:#1E7D32; --dark:#145A32; --ink:#1F2937; --line:#E5E7EB; --muted:#6B7280; }
           * { box-sizing:border-box; }
@@ -42,8 +42,8 @@
       <body>
         <header>
           <div class="wrap">
-            <h1>Eldo Fresh Farm — XML Sitemap</h1>
-            <p>Livestock • Coffee • Horticulture — Eldoret, Kenya. This file helps search engines discover every public page.</p>
+            <h1>Robu Cleaning Services — XML Sitemap</h1>
+            <p>Cleaning • Sanitation • Pest Control — Eldoret &amp; Nairobi, Kenya. This file helps search engines discover every public page.</p>
           </div>
         </header>
         <main class="wrap">
@@ -72,7 +72,7 @@
             </table>
           </div>
         </main>
-        <footer>ELDO LINK EXPORTS LIMITED — trading as Eldo Fresh Farm (Kimoning)</footer>
+        <footer>Robu Cleaning Services Ltd — Eldoret (HQ) &amp; Nairobi, Kenya</footer>
       </body>
     </html>
   </xsl:template>
