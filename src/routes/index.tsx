@@ -7,13 +7,13 @@ import { useProducts } from "@/hooks/use-products";
 import { useSiteContent } from "@/hooks/use-site-content";
 import { FaqSection } from "@/components/faq-section";
 import { site } from "@/lib/site";
-import imgUseProducts from "@/assets/photos/use-products.jpg";
-import imgExportServices2 from "@/assets/photos/export-services-2.jpg";
+import imgHomeAbout from "@/assets/photos/robu-restroom-tile-cleaning.png";
+import imgHomeHero from "@/assets/photos/robu-vehicles-messenger.jpg";
 
 const aboutAsset =
-  imgExportServices2;
+  imgHomeAbout;
 const heroAsset =
-  imgUseProducts;
+  imgHomeHero;
 
 const reasons = [
   {
@@ -29,7 +29,7 @@ const reasons = [
   {
     icon: Globe2,
     title: "Trained pest control technicians",
-    body: "Fumigation is carried out by trained technicians using materials sourced from licensed, reputable suppliers, not a generic spray and go job.",
+    body: "Fumigation is carried out by trained technicians using materials sourced from licensed, reputable suppliers, not a generic spray-and-go.",
   },
   {
     icon: Sprout,
@@ -173,7 +173,7 @@ function Home() {
               {[
                 "Staff vetted with verified ID, references and a C.I.D. certificate of good conduct",
                 "Trained pest control and fumigation technicians",
-                "Scheduled contracts and one off jobs, both",
+                "Scheduled contracts and one-off jobs, both",
               ].map((t) => (
                 <li key={t} className="flex items-start gap-3 text-sm text-foreground">
                   <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-primary/15 text-primary">
@@ -282,7 +282,7 @@ function Home() {
       {/* SERVICE AREAS */}
       <section className="border-t border-border">
         <div className="container-page py-14 sm:py-20 md:py-28 grid gap-10 sm:gap-16 lg:grid-cols-[1fr_1.1fr] items-center">
-          <Reveal variant="left">
+          <div>
             <SectionHeading
               eyebrow="Where We Work"
               title="Head office in Eldoret. Branch in Nairobi."
@@ -305,7 +305,7 @@ function Home() {
             >
               <Phone className="h-4 w-4" /> Call the office to check your area
             </a>
-          </Reveal>
+          </div>
 
           <Reveal
             variant="scale"
@@ -329,10 +329,7 @@ function Home() {
       {/* CTA */}
       <section className="border-t border-border">
         <div className="container-page py-12 sm:py-16 md:py-20">
-          <Reveal
-            variant="scale"
-            className="rounded-2xl sm:rounded-3xl bg-[oklch(0.24_0.06_256)] px-6 py-12 sm:px-8 sm:py-16 md:px-16 md:py-20 text-center"
-          >
+          <div className="rounded-2xl sm:rounded-3xl bg-[oklch(0.24_0.06_256)] px-6 py-12 sm:px-8 sm:py-16 md:px-16 md:py-20 text-center">
             <span className="inline-block font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.24em] text-white/50">
               Robu Cleaning Services
             </span>
@@ -350,7 +347,7 @@ function Home() {
                 Request a Quote <ArrowRight className="ml-1.5 h-4 w-4" />
               </Link>
             </Button>
-          </Reveal>
+          </div>
         </div>
       </section>
     </>

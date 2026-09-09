@@ -6,19 +6,19 @@ import {
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/section-heading";
 import { Reveal } from "@/components/reveal";
-import imgExportServices from "@/assets/photos/export-services.jpg";
-const heroImg = imgExportServices;
+import imgQualityHero from "@/assets/photos/robu-vehicles-messenger.jpg";
+const heroImg = imgQualityHero;
 
 export const Route = createFileRoute("/quality-compliance")({
   head: () => ({
     meta: [
-      { title: "Quality & Compliance — Robu Cleaning Services" },
+      { title: "Quality & Compliance, Robu Cleaning Services" },
       {
         name: "description",
         content:
           "How Robu Cleaning Services approaches service quality, crew training, staff vetting, daily inspections and workplace safety.",
       },
-      { property: "og:title", content: "Quality & Compliance — Robu Cleaning Services" },
+      { property: "og:title", content: "Quality & Compliance, Robu Cleaning Services" },
       { property: "og:url", content: "/quality-compliance" },
     ],
     links: [{ rel: "canonical", href: "/quality-compliance" }],

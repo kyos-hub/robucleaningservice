@@ -8,20 +8,18 @@ import { useProducts } from "@/hooks/use-products";
 import { useSiteContent } from "@/hooks/use-site-content";
 import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/reveal";
-
-const heroImg =
-  "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1600&q=80";
+import heroImg from "@/assets/photos/robu-pest-control-garden.jpg";
 
 export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
-      { title: "Our Services | Robu Cleaning Services Ltd" },
+      { title: "Our Services, Robu Cleaning Services Ltd" },
       {
         name: "description",
         content:
           "Cleaning, pest control & fumigation, sanitary services, ground maintenance, garbage collection, messengerial and tea making services across Kenya.",
       },
-      { property: "og:title", content: "Our Services | Robu Cleaning Services Ltd" },
+      { property: "og:title", content: "Our Services, Robu Cleaning Services Ltd" },
       {
         property: "og:description",
         content:
@@ -90,7 +88,7 @@ function Products() {
                 variant="outline"
                 className="h-12 px-6 rounded-xl font-display font-semibold bg-white/10 text-white border-white/40 hover:bg-white hover:text-foreground"
               >
-                <Link to="/corporate-contracts">Corporate contracts</Link>
+                <Link to="/export-services">Corporate contracts</Link>
               </Button>
             </div>
           </div>

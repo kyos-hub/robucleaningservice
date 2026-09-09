@@ -1,3 +1,12 @@
+import imgFloorCleaningTeam from "@/assets/photos/robu-floor-cleaning-team.jpg";
+import imgVehiclesMessenger from "@/assets/photos/robu-vehicles-messenger.jpg";
+import imgOfficeMopping from "@/assets/photos/robu-office-mopping.jpg";
+import imgPestControlGarden from "@/assets/photos/robu-pest-control-garden.jpg";
+import imgShowerCleaning from "@/assets/photos/robu-shower-cleaning.jpg";
+import imgWasteBins from "@/assets/photos/robu-waste-bins.jpg";
+import imgOfficeReception from "@/assets/photos/robu-office-reception.jpg";
+import imgSuppliesStore from "@/assets/photos/robu-supplies-store.jpg";
+
 export type ServiceCategory =
   "Cleaning" | "Pest Control & Fumigation" | "Grounds & Waste" | "Support Staffing" | "Supplies";
 
@@ -45,7 +54,7 @@ export const services: Service[] = [
     description:
       "Full contract cleaning for banks, commercial buildings, learning institutions, private and public hospitals, religious institutions and private homes, registered since 1997 and grown to a workforce of over 415 staff. Cleaners work under a Team Leader who inspects the site daily and briefs the Operations Manager by phone every day, so issues are caught the same day rather than at month end.",
     image:
-      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1400&q=80",
+      imgFloorCleaningTeam,
     includes: [
       "Floor cleaning procedures and sequences customised per site",
       "Dusting of tables, chairs, seats and other furniture",
@@ -73,7 +82,7 @@ export const services: Service[] = [
       },
       {
         title: "Deployment",
-        body: "Vetted, in-house trained cleaners are placed under a Team Leader with the correct machines, materials and PPE. All materials are sourced from licensed, reputable suppliers. Expired or defective stock is never used.",
+        body: "Vetted, in-house trained cleaners are placed under a Team Leader with the correct machines, materials and PPE. All materials are sourced from licensed, reputable suppliers, expired or defective stock is never used.",
       },
       {
         title: "Daily inspection",
@@ -86,13 +95,13 @@ export const services: Service[] = [
   },
   {
     slug: "car-wash",
-    name: "Car Wash: Interior & Exterior",
+    name: "Car Wash, Interior & Exterior",
     category: "Cleaning",
     tagline: "On-site washing for corporate fleets and staff parking.",
     description:
       "Interior and exterior vehicle washing carried out at your compound. Usually bundled into an existing facility contract for banks and institutions with pool vehicles, but available as a standalone arrangement where the vehicle count justifies it.",
     image:
-      "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=1400&q=80",
+      imgVehiclesMessenger,
     includes: [
       "Exterior body wash, rims and tyre dressing",
       "Interior vacuuming of seats, carpets and boot",
@@ -136,7 +145,7 @@ export const services: Service[] = [
     description:
       "Deep cleaning for wall-to-wall carpets, rugs, office seating and other soft furnishings using extraction machines and licensed products only. Booked either inside a routine cleaning contract or as a one-off ahead of an inspection, audit or handover.",
     image:
-      "https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=1400&q=80",
+      imgOfficeMopping,
     includes: [
       "Pre-inspection of fibres and stain types",
       "Vacuuming, pre-spray and agitation",
@@ -182,7 +191,7 @@ export const services: Service[] = [
     description:
       "Pest control and fumigation headed by a technician trained in chemical engineering at Kenya Polytechnic, with prior experience at Antipest (Mombasa) and Pestlab (Kitale) and over six years in the field. All products are sourced from licensed suppliers and treatment plans are written for each individual site, never a blanket spray.",
     image:
-      "https://images.unsplash.com/photo-1632943131957-6f9c5e449ff8?auto=format&fit=crop&w=1400&q=80",
+      imgPestControlGarden,
     includes: [
       "Cockroach, ant, bedbug, flea and termite treatment",
       "Rodent control, baiting and bait-station mapping",
@@ -230,7 +239,7 @@ export const services: Service[] = [
     description:
       "Washroom hygiene, sanitary bin servicing and attendant cover for banks, hospitals and commercial buildings. Overseen by a Head of Sanitary Services who spent over 25 years running Rentokil Initial's Nakuru branch and has attended various sanitary hygiene courses.",
     image:
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1400&q=80",
+      imgShowerCleaning,
     includes: [
       "Sanitary bin supply, exchange and hygienic disposal",
       "Air fresheners and dispenser servicing",
@@ -274,7 +283,7 @@ export const services: Service[] = [
     description:
       "Compound upkeep led by a team head who worked eleven years as Head Gardener at Palm Beach Hotel Mombasa and later as a caretaker at Khamis High School. Work covers grass cutting, hedge and fence trimming, flower beds and general external presentation, keeping every client site free from litter and with grass properly maintained.",
     image:
-      "https://images.unsplash.com/photo-1599629954294-14df9ec8bc05?auto=format&fit=crop&w=1400&q=80",
+      imgPestControlGarden,
     includes: [
       "Grass cutting with brush cutters and mowers",
       "Hedge, fence line and shrub trimming",
@@ -320,7 +329,7 @@ export const services: Service[] = [
     description:
       "Scheduled collection and disposal of general waste from client sites, handled in line with local authority and NEMA regulations so premises stay compliant, not just tidy. Waste storage areas are kept clean, leak-free and correctly signed, and any leakage is handled and disposed of properly.",
     image:
-      "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1400&q=80",
+      imgWasteBins,
     includes: [
       "Supply and servicing of waste bins and liners",
       "Scheduled collection rounds from your site",
@@ -366,7 +375,7 @@ export const services: Service[] = [
     description:
       "Screened messengers placed with corporate and institutional clients for deliveries, bank runs, errands and internal office logistics. Every candidate provides a national ID, academic testimonials and reference letters we personally call to verify, plus a certificate of good conduct from the C.I.D. before placement.",
     image:
-      "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80",
+      imgVehiclesMessenger,
     includes: [
       "Recruitment, vetting and reference verification by phone",
       "Certificate of good conduct from the C.I.D. on file",
@@ -412,7 +421,7 @@ export const services: Service[] = [
     description:
       "Tea-girls and tea-boys placed in offices, banks and institutions as part of facility support staffing. They are trained in hygiene and service standards at our in-house training unit and supervised through the same Team Leader structure as our cleaning crews.",
     image:
-      "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=1400&q=80",
+      imgOfficeReception,
     includes: [
       "Preparation and service of tea, coffee and refreshments",
       "Kitchenette cleaning and utensil hygiene",
@@ -455,7 +464,7 @@ export const services: Service[] = [
     description:
       "Supply of all types of cleaning materials, detergents and washroom consumables, purchased only from licensed and reputable sources. Expired or defective stock is never accepted. Useful for clients who want one supplier for both labour and consumables.",
     image:
-      "https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=1400&q=80",
+      imgSuppliesStore,
     includes: [
       "Floor cleaners, disinfectants and degreasers",
       "Hand wash, sanitiser, tissue and hand towels",
@@ -489,6 +498,139 @@ export const services: Service[] = [
       },
     ],
     schedule: "One-off or scheduled bulk supply",
+    coverage: COVERAGE,
+    availability: "Year-round",
+  },
+  {
+    slug: "commercial-cleaning",
+    name: "Commercial Cleaning",
+    category: "Cleaning",
+    tagline: "Contract cleaning built around how your business actually runs.",
+    description:
+      "Commercial cleaning for offices, retail premises, banks and corporate buildings, staffed by vetted crews under a Team Leader and priced against your traffic levels, floor types and operating hours rather than a fixed package.",
+    image:
+      imgFloorCleaningTeam,
+    includes: [
+      "Daily or scheduled office and floor cleaning",
+      "Reception, boardroom and common-area upkeep",
+      "Washroom servicing",
+      "Window and glass cleaning",
+      "Machine scrubbing and polishing of hard floors",
+      "Warning signage on wet or slippery floors",
+    ],
+    idealFor: [
+      "Corporate offices",
+      "Bank branches",
+      "Retail premises",
+      "Business parks",
+    ],
+    process: [
+      {
+        title: "Site survey",
+        body: "We walk the premises, note floor types and traffic, then price against what the site needs.",
+      },
+      {
+        title: "Custom schedule",
+        body: "A cleaning schedule and task standard is agreed in writing before crews are deployed.",
+      },
+      {
+        title: "Deployment",
+        body: "Vetted, in-house trained cleaners are placed under a Team Leader with the correct machines and materials.",
+      },
+      {
+        title: "Daily inspection",
+        body: "Team Leaders inspect the work and brief the Operations Manager daily.",
+      },
+    ],
+    schedule: "Daily, weekly or a custom schedule agreed per site",
+    coverage: COVERAGE,
+    availability: "Year-round",
+  },
+  {
+    slug: "facility-maintenance",
+    name: "Facility Maintenance",
+    category: "Grounds & Waste",
+    tagline: "Day-to-day upkeep so a facility keeps running without anyone noticing.",
+    description:
+      "Ongoing facility upkeep covering grounds, waste handling and general site presentation, run by supervisors who check standards on a fixed schedule and report issues before they become bigger problems.",
+    image:
+      imgWasteBins,
+    includes: [
+      "Grounds and compound upkeep",
+      "Scheduled waste collection and bin servicing",
+      "Routine site walk-throughs and issue reporting",
+      "Coordination with cleaning and pest control crews on the same site",
+      "Compliant waste disposal in line with NEMA rules",
+    ],
+    idealFor: [
+      "Institutional compounds",
+      "Corporate campuses",
+      "Hospitals",
+      "Schools",
+    ],
+    process: [
+      {
+        title: "Walk-through",
+        body: "We assess the site and agree what falls under routine maintenance.",
+      },
+      {
+        title: "Schedule agreed",
+        body: "A visit and reporting cycle is set so the site is checked regularly, not reactively.",
+      },
+      {
+        title: "Crews deployed",
+        body: "Grounds, waste and general upkeep tasks are carried out by trained staff.",
+      },
+      {
+        title: "Reporting",
+        body: "Supervisors log completed work and flag anything needing separate attention.",
+      },
+    ],
+    schedule: "Regular scheduled visits under contract",
+    coverage: COVERAGE,
+    availability: "Year-round",
+  },
+  {
+    slug: "specialized-services",
+    name: "Specialized Services",
+    category: "Supplies",
+    tagline: "One-off and custom jobs outside the standard service list.",
+    description:
+      "Specialized, one-off or custom-scoped jobs for clients whose needs don't fit neatly into a standard package, quoted individually against the site visit and the client's brief.",
+    image:
+      imgSuppliesStore,
+    includes: [
+      "Custom-scoped cleaning or maintenance jobs",
+      "Pre-event or post-event deep cleaning",
+      "Handover and move-in/move-out cleaning",
+      "Ad hoc supply of materials and equipment",
+      "Combined labour and consumables arrangements",
+    ],
+    idealFor: [
+      "One-off projects",
+      "Clients with non-standard requirements",
+      "Event organisers",
+      "Property handovers",
+    ],
+    process: [
+      {
+        title: "Brief",
+        body: "You describe the job and any deadline; we confirm scope on a site visit where needed.",
+      },
+      {
+        title: "Quotation",
+        body: "We price the job against the brief rather than a fixed package.",
+      },
+      {
+        title: "Execution",
+        body: "The right crew and materials are deployed for the specific job.",
+      },
+      {
+        title: "Sign-off",
+        body: "Work is inspected and handed over against the agreed brief.",
+      },
+    ],
+    schedule: "One-off or as agreed per job",
     coverage: COVERAGE,
     availability: "Year-round",
   },

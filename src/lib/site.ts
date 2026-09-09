@@ -48,12 +48,11 @@ export const nav = [
 
 // Sub-pages shown inside the "About Us" dropdown in the header.
 export const aboutDropdown = [
-  { to: "/corporate-contracts", label: "Corporate Contracts" },
+  { to: "/export-services", label: "Corporate Contracts" },
   { to: "/quality-compliance", label: "Quality & Compliance" },
 ] as const;
 
 export const services = [
-  { slug: "fumigation-pest-control", name: "Fumigation & Pest Control" },
   { slug: "commercial-cleaning", name: "Commercial Cleaning" },
   { slug: "post-construction-cleaning", name: "Post-Construction Cleaning" },
   { slug: "upholstery-cleaning", name: "Upholstery Cleaning" },

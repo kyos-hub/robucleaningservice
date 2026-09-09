@@ -13,9 +13,9 @@ export const Route = createFileRoute("/blog/$slug")({
   head: ({ loaderData }) => ({
     meta: loaderData
       ? [
-          { title: `${loaderData.title} — Robu Cleaning Services` },
+          { title: `${loaderData.title}, Robu Cleaning Services` },
           { name: "description", content: loaderData.excerpt },
-          { property: "og:title", content: `${loaderData.title} — Robu Cleaning Services` },
+          { property: "og:title", content: `${loaderData.title}, Robu Cleaning Services` },
           { property: "og:description", content: loaderData.excerpt },
           { property: "og:image", content: loaderData.image },
           { property: "og:type", content: "article" },
@@ -58,26 +58,20 @@ function BlogPost() {
               <ArrowLeft className="h-4 w-4" /> Back to Blog & News
             </Link>
           </Reveal>
-          <div className="mt-6 max-w-3xl">
-            <Reveal
-              delay={80}
-              as="span"
-              className="inline-flex items-center gap-1.5 rounded-full bg-primary/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-primary-foreground"
-            >
+          <Reveal delay={80} className="mt-6 max-w-3xl">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-primary-foreground">
               <CatIcon className="h-3 w-3" /> {post.category}
-            </Reveal>
-            <Reveal delay={160} as="h1" className="heading-hero mt-4 text-white">
-              {post.title}
-            </Reveal>
-          </div>
-          <div className="mt-6 flex flex-wrap items-center gap-5 text-sm text-white/80">
-            <Reveal delay={240} as="span" className="inline-flex items-center gap-1.5">
+            </span>
+            <h1 className="heading-hero mt-4 text-white">{post.title}</h1>
+          </Reveal>
+          <Reveal delay={150} className="mt-6 flex flex-wrap items-center gap-5 text-sm text-white/80">
+            <span className="inline-flex items-center gap-1.5">
               <CalendarDays className="h-4 w-4" /> {formatDate(post.date)}
-            </Reveal>
-            <Reveal delay={300} as="span" className="inline-flex items-center gap-1.5">
+            </span>
+            <span className="inline-flex items-center gap-1.5">
               <Clock className="h-4 w-4" /> {post.readMinutes} min read
-            </Reveal>
-          </div>
+            </span>
+          </Reveal>
         </div>
       </section>
 
@@ -90,7 +84,7 @@ function BlogPost() {
             </Reveal>
             <div className="mt-8 space-y-6">
               {post.body.map((paragraph, i) => (
-                <Reveal key={i} delay={i * 80} as="p" className="leading-relaxed text-foreground/90">
+                <Reveal key={i} delay={i * 60} as="p" className="leading-relaxed text-foreground/90">
                   {paragraph}
                 </Reveal>
               ))}
@@ -101,8 +95,7 @@ function BlogPost() {
                 Have a question about your own site, or want a quote for a similar service?{" "}
                 <Link to="/contact" className="font-semibold text-primary hover:underline">
                   Get in touch with our team
-                </Link>{" "}
-                — we're happy to help.
+                </Link>{" "}, we're happy to help.
               </p>
             </Reveal>
           </div>
@@ -161,7 +154,7 @@ function BlogPost() {
           <Reveal>
             <h2 className="heading-section text-white">Ready to schedule a service?</h2>
             <p className="mx-auto mt-3 max-w-xl text-white/85">
-              Tell us your site, service type and frequency — our team will follow up with
+              Tell us your site, service type and frequency, our team will follow up with
               next steps.
             </p>
           </Reveal>

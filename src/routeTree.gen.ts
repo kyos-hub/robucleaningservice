@@ -15,6 +15,7 @@ import { Route as BlogRouteImport } from './routes/blog'
 import { Route as CareersRouteImport } from './routes/careers'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CorporateContractsRouteImport } from './routes/corporate-contracts'
+import { Route as ExportServicesRouteImport } from './routes/export-services'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as QualityComplianceRouteImport } from './routes/quality-compliance'
@@ -55,6 +56,11 @@ const ContactRoute = ContactRouteImport.update({
 const CorporateContractsRoute = CorporateContractsRouteImport.update({
   id: '/corporate-contracts',
   path: '/corporate-contracts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExportServicesRoute = ExportServicesRouteImport.update({
+  id: '/export-services',
+  path: '/export-services',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GalleryRoute = GalleryRouteImport.update({
@@ -120,6 +126,7 @@ export interface FileRoutesByFullPath {
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
   '/corporate-contracts': typeof CorporateContractsRoute
+  '/export-services': typeof ExportServicesRoute
   '/gallery': typeof GalleryRoute
   '/privacy': typeof PrivacyRoute
   '/quality-compliance': typeof QualityComplianceRoute
@@ -138,6 +145,7 @@ export interface FileRoutesByTo {
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
   '/corporate-contracts': typeof CorporateContractsRoute
+  '/export-services': typeof ExportServicesRoute
   '/gallery': typeof GalleryRoute
   '/privacy': typeof PrivacyRoute
   '/quality-compliance': typeof QualityComplianceRoute
@@ -157,6 +165,7 @@ export interface FileRoutesById {
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
   '/corporate-contracts': typeof CorporateContractsRoute
+  '/export-services': typeof ExportServicesRoute
   '/gallery': typeof GalleryRoute
   '/privacy': typeof PrivacyRoute
   '/quality-compliance': typeof QualityComplianceRoute
@@ -178,6 +187,7 @@ export interface FileRouteTypes {
     | '/careers'
     | '/contact'
     | '/corporate-contracts'
+    | '/export-services'
     | '/gallery'
     | '/privacy'
     | '/quality-compliance'
@@ -196,6 +206,7 @@ export interface FileRouteTypes {
     | '/careers'
     | '/contact'
     | '/corporate-contracts'
+    | '/export-services'
     | '/gallery'
     | '/privacy'
     | '/quality-compliance'
@@ -214,6 +225,7 @@ export interface FileRouteTypes {
     | '/careers'
     | '/contact'
     | '/corporate-contracts'
+    | '/export-services'
     | '/gallery'
     | '/privacy'
     | '/quality-compliance'
@@ -234,6 +246,7 @@ export interface RootRouteChildren {
   CareersRoute: typeof CareersRoute
   ContactRoute: typeof ContactRoute
   CorporateContractsRoute: typeof CorporateContractsRoute
+  ExportServicesRoute: typeof ExportServicesRoute
   GalleryRoute: typeof GalleryRoute
   PrivacyRoute: typeof PrivacyRoute
   QualityComplianceRoute: typeof QualityComplianceRoute
@@ -285,6 +298,13 @@ declare module '@tanstack/react-router' {
       path: '/corporate-contracts'
       fullPath: '/corporate-contracts'
       preLoaderRoute: typeof CorporateContractsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/export-services': {
+      id: '/export-services'
+      path: '/export-services'
+      fullPath: '/export-services'
+      preLoaderRoute: typeof ExportServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/gallery': {
@@ -400,6 +420,7 @@ const rootRouteChildren: RootRouteChildren = {
   CareersRoute: CareersRoute,
   ContactRoute: ContactRoute,
   CorporateContractsRoute: CorporateContractsRoute,
+  ExportServicesRoute: ExportServicesRoute,
   GalleryRoute: GalleryRoute,
   PrivacyRoute: PrivacyRoute,
   QualityComplianceRoute: QualityComplianceRoute,

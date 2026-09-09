@@ -25,7 +25,7 @@ export const homeFaqs: FaqItem[] = [
   },
   {
     q: "Do you offer recurring service contracts?",
-    a: "Yes — we run scheduled cleaning, sanitary and ground maintenance programs for offices, institutions and multi-branch organizations, with standards and procedures agreed with each client. Tell us your requirements when requesting a quote.",
+    a: "Yes, we run scheduled cleaning, sanitary and ground maintenance programs for offices, institutions and multi-branch organizations, with standards and procedures agreed with each client. Tell us your requirements when requesting a quote.",
   },
   {
     q: "How do you ensure staff are trustworthy and well trained?",

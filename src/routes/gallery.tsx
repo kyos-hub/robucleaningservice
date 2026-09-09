@@ -11,13 +11,13 @@ const heroImg = imgGallery;
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery | Robu Cleaning Services at Work" },
+      { title: "Gallery, Robu Cleaning Services at Work" },
       {
         name: "description",
         content:
-          "Photos and videos from Robu Cleaning Services Ltd. Our crews, equipment and completed jobs across Eldoret, Nairobi and the wider Rift, Western and Nyanza regions.",
+          "Photos and videos from Robu Cleaning Services Ltd, our crews, equipment and completed jobs across Eldoret, Nairobi and the wider Rift, Western and Nyanza regions.",
       },
-      { property: "og:title", content: "Gallery | Robu Cleaning Services at Work" },
+      { property: "og:title", content: "Gallery, Robu Cleaning Services at Work" },
       {
         property: "og:description",
         content: "A visual look at commercial cleaning, fumigation and facility maintenance jobs by Robu Cleaning Services.",

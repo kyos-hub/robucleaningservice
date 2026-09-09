@@ -7,13 +7,13 @@ import { Reveal } from "@/components/reveal";
 export const Route = createFileRoute("/service-compliance")({
   head: () => ({
     meta: [
-      { title: "Service Compliance | Robu Cleaning Services" },
+      { title: "Service Compliance, Robu Cleaning Services" },
       {
         name: "description",
         content:
-          "Chemical use, safety and compliance information for clients working with Robu Cleaning Services, including site access and occupational safety responsibilities.",
+          "Chemical use, safety and compliance information for clients working with Robu Cleaning Services, including site-access and occupational safety responsibilities.",
       },
-      { property: "og:title", content: "Service Compliance | Robu Cleaning Services" },
+      { property: "og:title", content: "Service Compliance, Robu Cleaning Services" },
       { property: "og:url", content: "/service-compliance" },
     ],
     links: [{ rel: "canonical", href: "/service-compliance" }],
@@ -29,7 +29,7 @@ const points = [
   },
   {
     icon: Scale,
-    title: "Clients are responsible for site access and safety",
+    title: "Clients are responsible for site access & safety",
     body: "Clients are responsible for confirming safe site access, vacating treated areas where required, and informing occupants of any temporary restrictions.",
   },
   {
@@ -40,7 +40,7 @@ const points = [
   {
     icon: FileText,
     title: "Documentation depends on the service and site",
-    body: "The specific safety data sheets, certificates or reports required for a job depend on the service type and site, and are coordinated on a per contract basis.",
+    body: "The specific safety data sheets, certificates or reports required for a job depend on the service type and site, and are coordinated on a per-contract basis.",
   },
   {
     icon: ShieldOff,
@@ -55,11 +55,11 @@ function ExportCompliance() {
       <section className="border-b border-border bg-muted/40">
         <div className="container-page py-16 md:py-24 max-w-3xl">
           <span className="eyebrow">Service Compliance</span>
-          <h1 className="heading-hero mt-5">Client responsibilities and service terms</h1>
+          <h1 className="heading-hero mt-5">Client responsibilities & service terms</h1>
           <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
             All services offered by Robu Cleaning Services Ltd are subject to applicable Kenyan
             health, safety and environmental regulations. Clients are responsible for ensuring safe
-            site access and informing occupants of any service related restrictions.
+            site access and informing occupants of any service-related restrictions.
           </p>
         </div>
       </section>

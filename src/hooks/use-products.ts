@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { products as staticProducts, type Product } from "@/lib/products";
-import imgUseProducts from "@/assets/photos/use-products.jpg";
+import imgUseProducts from "@/assets/photos/robu-supplies-store.jpg";
 
 type DbProduct = {
   slug: string;

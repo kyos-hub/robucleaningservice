@@ -14,13 +14,13 @@ import { getServiceBySlug, getRelatedServices, type Service } from "@/lib/produc
 import { supabase } from "@/integrations/supabase/client";
 import { site } from "@/lib/site";
 import { Reveal } from "@/components/reveal";
-import imgUseProducts from "@/assets/photos/use-products.jpg";
+import imgUseProducts from "@/assets/photos/robu-supplies-store.jpg";
 
 /**
  * Builds a full Service object from a Supabase products row for slugs that
  * only exist in the DB (i.e. not in the static services[] array in
  * lib/products.ts). This is what was missing before: the loader used to
- * ONLY check the static array, so any DB only product 404'd when clicked.
+ * ONLY check the static array, so any DB-only product 404'd when clicked.
  */
 function serviceFromDbRow(row: {
   slug: string;
@@ -90,7 +90,7 @@ export const Route = createFileRoute("/services/$slug")({
     }
 
     if (product) {
-      // DB only product: build a Service object from it instead of 404ing.
+      // DB-only product: build a Service object from it instead of 404ing.
       return serviceFromDbRow(product as any);
     }
 
@@ -101,12 +101,12 @@ export const Route = createFileRoute("/services/$slug")({
     if (!loaderData) {
       return {
         meta: [
-          { title: "Service not found | Robu Cleaning Services Ltd" },
+          { title: "Service not found, Robu Cleaning Services Ltd" },
           { name: "robots", content: "noindex" },
         ],
       };
     }
-    const title = `${loaderData.name} | Robu Cleaning Services Ltd`;
+    const title = `${loaderData.name}, Robu Cleaning Services Ltd`;
     const description = loaderData.tagline;
     return {
       meta: [
